@@ -89,7 +89,7 @@ def merge_R_group(mol, R_group, replaceIndex):
 
     # the linking R atom on the R group
     rgroup_R_atom, R_atom_neighbour = __getAttachmentVector(R_group)
-    print(f"Rgroup atom index {rgroup_R_atom} neighbouring {R_atom_neighbour}")
+    # print(f"Rgroup atom index {rgroup_R_atom} neighbouring {R_atom_neighbour}")
 
     # atom to be replaced in the molecule
     replace_atom = mol.GetAtomWithIdx(replaceIndex)
