@@ -622,6 +622,9 @@ class RList(RInterface, list):
     def GetNumConformers(self):
         return [rmol.GetNumConformers() for rmol in self]
 
+    def GetSmiles(self):
+        return [Chem.MolToSmiles(rmol) for rmol in self]
+
     def remove_clashing_confs(self, prot, min_dst_allowed=1):
         for i, rmol in enumerate(self):
             print(f'RMol index {i}')
@@ -715,6 +718,5 @@ def build_molecules(core_ligand: RMol,
             id_counter += 1
 
     return combined_mols
-
 
 
